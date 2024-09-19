@@ -17,7 +17,7 @@ Los elementos se deben enganchar al padre o a otros elementos.
 - layout_constraintEnd_toEndOf
 - layout_constraintBottom_toBottomOf
 
-## Componentes
+# Componentes
 
 - TextView: Permite añadir una cadena de texto.
 - View: Se utiliza comunmente como un contenedor de otros componentes.
