@@ -19,5 +19,7 @@ Los elementos se deben enganchar al padre o a otros elementos.
 
 # Componentes
 
-- TextView: Permite añadir una cadena de texto.
+- TextView: Añade una cadena de texto a la vista.
 - View: Se utiliza comunmente como un contenedor de otros componentes.
+- Card: Mediante este componente es posible agrupar otros componentes añadiendo estilos personalizados.
+- RangeSlider: Permite establecer un deslizador mediante el cual se puede seleccionar un rango de valores.

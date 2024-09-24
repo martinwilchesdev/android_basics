@@ -45,4 +45,5 @@
     </string>
     <string name="male">MALE</string>
     <string name="female">FEMALE</string>
+    <string name="altura">Altura</string>
 </resources>
