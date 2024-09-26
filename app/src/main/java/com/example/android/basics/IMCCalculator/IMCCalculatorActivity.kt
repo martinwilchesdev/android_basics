@@ -20,6 +20,7 @@ class IMCCalculatorActivity : AppCompatActivity() {
     private var isMaleSelected = true
     private var isFemaleSelected = false
     private var currentWeight = 60
+    private var currentAge = 30
 
     /**
      * Las variables declaradas con lateinit no es necesario que sean inicializadas de forma inmediata
@@ -38,6 +39,11 @@ class IMCCalculatorActivity : AppCompatActivity() {
     private lateinit var btnSubtractWeight: FloatingActionButton
     private lateinit var btnAddWeight: FloatingActionButton
     private lateinit var weightText: TextView
+
+    // Edad de la persona (texto y bbotones de accion para incrementar la edad)
+    private lateinit var btnSubtractAge: FloatingActionButton
+    private lateinit var btnAddAge: FloatingActionButton
+    private lateinit var ageText: TextView
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,6 +69,9 @@ class IMCCalculatorActivity : AppCompatActivity() {
         btnSubtractWeight = findViewById<FloatingActionButton>(R.id.btnSubtractWeight)
         btnAddWeight = findViewById<FloatingActionButton>(R.id.btnAddWeight)
         weightText = findViewById<TextView>(R.id.weightText)
+        btnSubtractAge = findViewById<FloatingActionButton>(R.id.btnSubtractAge)
+        btnAddAge = findViewById<FloatingActionButton>(R.id.btnAddAge)
+        ageText = findViewById<TextView>(R.id.ageText)
     }
 
     // Inicializar los escuchadores de eventos de ambos componentes
@@ -89,11 +98,23 @@ class IMCCalculatorActivity : AppCompatActivity() {
             currentWeight += 1
             setWeight()
         }
+        btnSubtractAge.setOnClickListener {
+            currentAge -= 1
+            setAge()
+        }
+        btnAddAge.setOnClickListener {
+            currentAge += 1
+            setAge()
+        }
     }
 
     // Definir el valor del peso
     private fun setWeight() {
         weightText.text = currentWeight.toString()
+    }
+
+    private fun setAge() {
+        ageText.text = currentAge.toString()
     }
 
     // Cambiar el valor de las variables booleanas
@@ -123,5 +144,6 @@ class IMCCalculatorActivity : AppCompatActivity() {
     private fun initUI() {
         setGenderColor()
         setWeight()
+        setAge()
     }
 }
